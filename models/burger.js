@@ -15,7 +15,12 @@ var burger = {
 
   update: function(objColVals, condition, callback){
     orm.updateOne("burgers", objColVals, condition, function (res){
-      cb(res);
+      callback(res);
+    });
+  },
+  delete: function(conditionVal, callback){
+    orm.deleteOne('burgers', 'id', conditionVal, function(res){
+      callback(res);
     });
   }
 
