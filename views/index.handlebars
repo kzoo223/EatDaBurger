@@ -24,7 +24,7 @@
       {{#if this.devoured}}
         <li>
           {{this.burger_name}}
-            <form action="delete/{{this.id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-primary">Remove</button>
+            <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-primary">Remove</button>
             </form>
         </li>
         {{/if}}
